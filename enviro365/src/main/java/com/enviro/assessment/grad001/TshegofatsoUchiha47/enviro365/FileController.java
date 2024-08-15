@@ -29,7 +29,7 @@ public class FileController {
 	        if (file == null) {
 	            return ResponseEntity.notFound().build();
 	        }
-	        return ResponseEntity.status(file);
+	        return ResponseEntity.accepted();
 	    }
     @PostMapping("/upload")
     public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file) {
